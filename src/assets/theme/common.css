@@ -1,0 +1,33 @@
+.common-theme {
+  background: url("../images/background.jpg") no-repeat;
+  color: #c4c4c4; }
+  .common-theme .common-header {
+    background-color: rgba(0, 0, 0, 0.3); }
+  .common-theme .common-footer {
+    background-color: rgba(0, 0, 0, 0.3); }
+  .common-theme .nav-header {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #c4c4c4; }
+  .common-theme .vue-scrollbar__wrapper:hover .scrollbar {
+    background-color: rgba(0, 0, 0, 0.3) !important; }
+  .common-theme .column {
+    background-color: rgba(255, 255, 255, 0.1); }
+  .common-theme .trapezoid-header {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #333333; }
+    .common-theme .trapezoid-header:after, .common-theme .trapezoid-header:before {
+      border-bottom-color: rgba(255, 255, 255, 0.2) !important; }
+  .common-theme .column.middle section {
+    background-color: rgba(255, 255, 255, 0.2); }
+  .common-theme .scrollbar.simple .scrollbar-v .scrollbar-v-bg {
+    background-color: rgba(0, 0, 0, 0.1); }
+    .common-theme .scrollbar.simple .scrollbar-v .scrollbar-v-bg .scrollbar-v-cricle {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 2px solid rgba(0, 0, 0, 0.4); }
+  .common-theme .scrollbar.simple:hover .scrollbar-v .scrollbar-v-bg {
+    background-color: rgba(0, 0, 0, 0.2); }
+    .common-theme .scrollbar.simple:hover .scrollbar-v .scrollbar-v-bg .scrollbar-v-cricle {
+      border-color: rgba(0, 0, 0, 0.6);
+      background-color: white; }
+
+/*# sourceMappingURL=common.css.map */

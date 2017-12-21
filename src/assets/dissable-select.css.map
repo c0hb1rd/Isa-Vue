@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,CAAE;EACA,WAAW,EAAE,IAAI;EACjB,gBAAgB,EAAE,IAAI;EACtB,eAAe,EAAE,IAAI;EACrB,mBAAmB,EAAE,IAAI;EAEzB,MAAM,EAAE,OAAO",
+"sources": ["dissable-select.scss"],
+"names": [],
+"file": "dissable-select.css"
+}

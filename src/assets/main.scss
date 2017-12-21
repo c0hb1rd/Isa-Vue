@@ -1,0 +1,72 @@
+* {
+  transition: background-color 1s, color .1s
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  #app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & > .common-header {
+      text-align: center;
+      min-height: 50px;
+      line-height: 50px;
+    }
+
+    & > .common-body {
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    & > .common-footer {
+      justify-content: center;
+      min-height: 30px;
+      line-height: 30px;
+      font-size: 12px;
+    }
+  }
+
+  div, section {
+    display: flex;
+  }
+
+  .column {
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
+
+    .icon-area {
+      cursor: pointer;
+      * {
+        cursor: pointer;
+      }
+
+    }
+  }
+
+  .vue-scrollbar__wrapper {
+    width: 100%;
+    background-color: transparent;
+    flex-grow: 1;
+    flex-direction: column;
+
+    .vue-scrollbar__area {
+      display: block;
+    }
+
+    .scrollbar.vue-scrollbar-transition {
+      border-radius: 4px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.light-theme {
+  background: url("../images/background-light.jpg") no-repeat;
+  color: #333333; }
+  .light-theme .common-header {
+    background-color: rgba(255, 255, 255, 0.3); }
+  .light-theme .common-body {
+    flex-grow: 1; }
+  .light-theme .common-footer {
+    background-color: rgba(255, 255, 255, 0.3); }
+  .light-theme .nav-header {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #333333; }
+  .light-theme .vue-scrollbar__wrapper .scrollbar {
+    background-color: rgba(0, 0, 0, 0.1) !important; }
+  .light-theme .vue-scrollbar__wrapper:hover .scrollbar {
+    background-color: rgba(0, 0, 0, 0.3) !important; }
+  .light-theme .column {
+    background-color: rgba(0, 0, 0, 0.1); }
+  .light-theme .trapezoid-header {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(53, 53, 53, 0.82); }
+    .light-theme .trapezoid-header:after, .light-theme .trapezoid-header:before {
+      border-bottom-color: rgba(255, 255, 255, 0.2) !important; }
+  .light-theme .column.middle section {
+    background-color: rgba(255, 255, 255, 0.2); }
+  .light-theme .scrollbar.simple .scrollbar-v .scrollbar-v-bg {
+    background-color: rgba(255, 255, 255, 0.2); }
+    .light-theme .scrollbar.simple .scrollbar-v .scrollbar-v-bg .scrollbar-v-cricle {
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 2px solid rgba(255, 255, 255, 0.4); }
+  .light-theme .scrollbar.simple:hover .scrollbar-v .scrollbar-v-bg {
+    background-color: rgba(255, 255, 255, 0.4); }
+    .light-theme .scrollbar.simple:hover .scrollbar-v .scrollbar-v-bg .scrollbar-v-cricle {
+      border-color: rgba(255, 255, 255, 0.6);
+      background-color: black; }
+
+/*# sourceMappingURL=light.css.map */
