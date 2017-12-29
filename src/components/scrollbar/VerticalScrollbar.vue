@@ -1,5 +1,5 @@
 <template>
-    <div ref='body' class="scrollbar simple">
+    <div ref='body' class="scrollbar vertical">
         <div ref='content' class="content">
             <slot></slot>
         </div>
@@ -23,7 +23,7 @@
     export default {
         data() {
             return {
-                currentMarginT: 0,
+                currentMarginL: 0,
                 top: 0,
                 float: 20,
                 scrollbarVRect: 0
@@ -60,8 +60,8 @@
                 }
 
 
-                this.currentMarginT = -(path / 100 * (this.$refs.content.clientHeight - this.$refs.body.clientHeight));
-                this.$refs.content.style.marginTop = this.currentMarginT + 'px';
+                this.currentMarginL = -(path / 100 * (this.$refs.content.clientHeight - this.$refs.body.clientHeight));
+                this.$refs.content.style.marginTop = this.currentMarginL + 'px';
             },
             endVDrop(e) {
                 document.body.onmousemove = null
@@ -90,10 +90,10 @@
 
                 if (maxMargin <= 0) {
                     scrollbarV.style.display = 'none';
-                    content.style.marginRight = '5px';
+                    content.style.marginRight = '0px';
                     content.style.marginTop = '0';
                     scrollbarVCricle.style.top = '0%';
-                    this.currentMarginT = 0;
+                    this.currentMarginL = 0;
 
                 } else {
                     scrollbarV.style.display = 'flex';
@@ -111,22 +111,22 @@
                 }
 
                 if (event.deltaY > 0) {
-                    this.currentMarginT -= this.float;
+                    this.currentMarginL -= this.float;
                 } else {
-                    this.currentMarginT += this.float;
+                    this.currentMarginL += this.float;
                 }
 
-                if (-this.currentMarginT <= 0) {
-                    this.currentMarginT = 0;
+                if (-this.currentMarginL <= 0) {
+                    this.currentMarginL = 0;
                 }
 
-                if (-this.currentMarginT >= maxMargin) {
-                    this.currentMarginT = -maxMargin;
+                if (-this.currentMarginL >= maxMargin) {
+                    this.currentMarginL = -maxMargin;
                 }
 
 
-                if ((scrollbarHeight / body.clientHeight <= -(this.currentMarginT / maxMargin))) {
-                    let x = (-(this.currentMarginT / maxMargin) - scrollbarHeight / scrollbarV.clientHeight) * 100;
+                if ((scrollbarHeight / body.clientHeight <= -(this.currentMarginL / maxMargin))) {
+                    let x = (-(this.currentMarginL / maxMargin) - scrollbarHeight / scrollbarV.clientHeight) * 100;
 
                     if (x > 0)
                         scrollbarVCricle.style.top = x + '%';
@@ -134,21 +134,21 @@
                     scrollbarVCricle.style.top = '0%';
                 }
 
-                content.style.marginTop = this.currentMarginT + 'px';
+                content.style.marginTop = this.currentMarginL + 'px';
             }
         }
     }
 </script>
 
 <style lang="scss">
-    .scrollbar.simple {
+    .scrollbar.vertical {
         position: relative;
         flex-grow: 1;
         flex-direction: column;
         overflow: hidden;
         padding: 0;
 
-        .content {
+        & > .content {
             display: block;
 
             transition: margin .2s, transfrom .2s;
@@ -156,9 +156,10 @@
 
         .scrollbar-v {
             position: absolute;
+            padding-bottom: 1.5px;
             right: 5px;
-            top: 20px;
-            bottom: 20px;
+            top: 5px;
+            bottom: 5px;
             justify-content: center;
             width: 24px;
             flex-direction: row;
@@ -172,7 +173,7 @@
                     border-radius: 90px;
                     width: 16px;
                     height: 16px;
-                    right: -8px;
+                    right: -9px;
 
                     position: absolute;
 

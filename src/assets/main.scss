@@ -1,5 +1,9 @@
 * {
-  transition: background-color 1s, color .1s
+  transition: color .1s, background .2s, border .2s, padding .2s, margin .2s, left .2s, white-space .2s;
+
+  &:after, &:before {
+    transition: color .1s, background .2s, border .2s;
+  }
 }
 
 body {
@@ -19,8 +23,11 @@ body {
 
     & > .common-header {
       text-align: center;
-      min-height: 50px;
-      line-height: 50px;
+      justify-content: center;
+      flex-direction: row;
+      min-height: 30px;
+      padding: 10px;
+      line-height: 30px;
     }
 
     & > .common-body {
@@ -41,7 +48,6 @@ body {
   }
 
   .column {
-    flex-grow: 1;
     flex-direction: column;
     padding: 5px;
     margin: 5px;

@@ -26,6 +26,7 @@
         flex-direction: row;
         overflow: visible;
         border-radius: 4px;
+        margin-bottom: 5px;
 
         & > div {
             height: 20px;

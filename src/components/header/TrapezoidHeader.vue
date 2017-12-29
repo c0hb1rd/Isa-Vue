@@ -6,6 +6,7 @@
 
         <div class="trapezoid-header_title">
             <span class="">{{ title }}</span>
+            <slot></slot>
         </div>
     </div>
 </template>

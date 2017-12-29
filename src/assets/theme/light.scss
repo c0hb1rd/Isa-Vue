@@ -8,10 +8,6 @@
     background-color: rgba(255, 255, 255, .3);
   }
 
-  .common-body {
-    flex-grow: 1;
-  }
-
   .common-footer {
     background-color: rgba(255, 255, 255, .3);
   }
@@ -33,10 +29,6 @@
     }
   }
 
-  .column {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
   .trapezoid-header {
     background-color: $trapezoid-color;
     color: rgba(53, 53, 53, 0.82);
@@ -46,13 +38,23 @@
     }
   }
 
-  .column.middle {
-    section {
-      background-color: $trapezoid-color;
+  .column {
+    &.simple {
+      & > section {
+        background-color: rgba(255, 255, 255, .1);
+      }
     }
+
+    &.middle {
+      section {
+        background-color: $trapezoid-color;
+      }
+    }
+
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
-  .scrollbar.simple {
+  .scrollbar {
     .scrollbar-v {
       .scrollbar-v-bg {
         background-color: rgba(255, 255, 255, .2);
@@ -61,7 +63,26 @@
           border: 2px solid rgba(255, 255, 255, .4);
         }
       }
+    }
 
+    .scrollbar-x {
+      .scrollbar-x-bg {
+        background-color: rgba(255, 255, 255, .2);
+        .scrollbar-x-cricle {
+          background-color: rgba(0, 0, 0, .7);
+          border: 2px solid rgba(255, 255, 255, .4);
+        }
+      }
+
+      &:hover {
+        .scrollbar-x-bg {
+          background-color: rgba(255, 255, 255, .4);
+          .scrollbar-x-cricle {
+            border-color: rgba(255, 255, 255, .6);
+            background-color: rgba(0, 0, 0, 1);
+          }
+        }
+      }
     }
 
     &:hover {
@@ -74,6 +95,16 @@
           }
         }
       }
+
+      //.scrollbar-x {
+      //  .scrollbar-x-bg {
+      //    background-color: rgba(255, 255, 255, .4);
+      //    .scrollbar-x-cricle {
+      //      border-color: rgba(255, 255, 255, .6);
+      //      background-color: rgba(0, 0, 0, 1);
+      //    }
+      //  }
+      //}
     }
   }
 }

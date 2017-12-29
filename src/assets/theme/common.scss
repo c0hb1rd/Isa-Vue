@@ -1,11 +1,10 @@
 .common-theme {
-  $trapezoid-color: rgba(255, 255, 255, .2);
+  $trapezoid-color: rgba(8, 41, 46, 0.2);
 
   background: url("../images/background.jpg") no-repeat;
   color: #c4c4c4;
 
   .common-header {
-
     background-color: rgba(0, 0, 0, .3);
   }
 
@@ -27,46 +26,80 @@
   }
 
   .column {
+    &.simple {
+      & > section {
+        background-color: rgba(0, 0, 0, .2);
+      }
+    }
+
+    &.middle {
+      section {
+        background-color: $trapezoid-color;
+      }
+    }
     background-color: rgba(255, 255, 255, 0.1);
   }
 
   .trapezoid-header {
     background-color: $trapezoid-color;
-    color: #333333;
+    color: #c4c4c4;
 
     &:after, &:before {
       border-bottom-color: $trapezoid-color !important;
     }
   }
 
-  .column.middle {
-    section {
-      background-color: $trapezoid-color;
-    }
-  }
-
-  .scrollbar.simple {
+  .scrollbar {
     .scrollbar-v {
       .scrollbar-v-bg {
-        background-color: rgba(0, 0, 0, .1);
+        background-color: rgba(255, 255, 255, .2);
         .scrollbar-v-cricle {
           background-color: rgba(255, 255, 255, .8);
           border: 2px solid rgba(0, 0, 0, .4);
         }
       }
+    }
 
+    .scrollbar-x {
+      .scrollbar-x-bg {
+        background-color: rgba(255, 255, 255, .2);
+        .scrollbar-x-cricle {
+          background-color: rgba(255, 255, 255, .8);
+          border: 2px solid rgba(0, 0, 0, .4);
+        }
+      }
+
+      &:hover {
+        .scrollbar-x-bg {
+          background-color: rgba(255, 255, 255, .4);
+          .scrollbar-x-cricle {
+            border-color: rgba(0, 0, 0, .6);
+            background-color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
     }
 
     &:hover {
       .scrollbar-v {
         .scrollbar-v-bg {
-          background-color: rgba(0, 0, 0, .2);
+          background-color: rgba(255, 255, 255, .4);
           .scrollbar-v-cricle {
             border-color: rgba(0, 0, 0, .6);
             background-color: rgba(255, 255, 255, 1);
           }
         }
       }
+
+      //.scrollbar-x {
+      //  .scrollbar-x-bg {
+      //    background-color: rgba(255, 255, 255, .4);
+      //    .scrollbar-x-cricle {
+      //      border-color: rgba(0, 0, 0, .6);
+      //      background-color: rgba(255, 255, 255, 1);
+      //    }
+      //  }
+      //}
     }
   }
 }

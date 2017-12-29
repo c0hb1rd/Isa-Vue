@@ -1,6 +1,6 @@
 <template>
     <div class="column middle">
-        <div class="column-header">
+        <div v-if="showHeader" class="column-header">
             <slot></slot>
         </div>
 
@@ -16,7 +16,11 @@
     export default {
         data() {
             return {
-                lastMargin: '0px'
+                lastMargin: '0px',
+                showHeader: {
+                    type: Boolean,
+                    default: true
+                }
             }
         },
 //        mounted() {
@@ -51,6 +55,7 @@
     .column.middle {
         background-color: transparent;
         flex-direction: column;
+        flex-grow: 1;
         padding: 0;
 
         .column-header {

@@ -12,21 +12,33 @@
     background-color: rgba(0, 0, 0, 0.3) !important; }
   .common-theme .column {
     background-color: rgba(255, 255, 255, 0.1); }
+    .common-theme .column.simple > section {
+      background-color: rgba(0, 0, 0, 0.2); }
+    .common-theme .column.middle section {
+      background-color: rgba(8, 41, 46, 0.2); }
   .common-theme .trapezoid-header {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #333333; }
+    background-color: rgba(8, 41, 46, 0.2);
+    color: #c4c4c4; }
     .common-theme .trapezoid-header:after, .common-theme .trapezoid-header:before {
-      border-bottom-color: rgba(255, 255, 255, 0.2) !important; }
-  .common-theme .column.middle section {
+      border-bottom-color: rgba(8, 41, 46, 0.2) !important; }
+  .common-theme .scrollbar .scrollbar-v .scrollbar-v-bg {
     background-color: rgba(255, 255, 255, 0.2); }
-  .common-theme .scrollbar.simple .scrollbar-v .scrollbar-v-bg {
-    background-color: rgba(0, 0, 0, 0.1); }
-    .common-theme .scrollbar.simple .scrollbar-v .scrollbar-v-bg .scrollbar-v-cricle {
+    .common-theme .scrollbar .scrollbar-v .scrollbar-v-bg .scrollbar-v-cricle {
       background-color: rgba(255, 255, 255, 0.8);
       border: 2px solid rgba(0, 0, 0, 0.4); }
-  .common-theme .scrollbar.simple:hover .scrollbar-v .scrollbar-v-bg {
-    background-color: rgba(0, 0, 0, 0.2); }
-    .common-theme .scrollbar.simple:hover .scrollbar-v .scrollbar-v-bg .scrollbar-v-cricle {
+  .common-theme .scrollbar .scrollbar-x .scrollbar-x-bg {
+    background-color: rgba(255, 255, 255, 0.2); }
+    .common-theme .scrollbar .scrollbar-x .scrollbar-x-bg .scrollbar-x-cricle {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 2px solid rgba(0, 0, 0, 0.4); }
+  .common-theme .scrollbar .scrollbar-x:hover .scrollbar-x-bg {
+    background-color: rgba(255, 255, 255, 0.4); }
+    .common-theme .scrollbar .scrollbar-x:hover .scrollbar-x-bg .scrollbar-x-cricle {
+      border-color: rgba(0, 0, 0, 0.6);
+      background-color: white; }
+  .common-theme .scrollbar:hover .scrollbar-v .scrollbar-v-bg {
+    background-color: rgba(255, 255, 255, 0.4); }
+    .common-theme .scrollbar:hover .scrollbar-v .scrollbar-v-bg .scrollbar-v-cricle {
       border-color: rgba(0, 0, 0, 0.6);
       background-color: white; }
 

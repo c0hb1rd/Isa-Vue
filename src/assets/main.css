@@ -1,5 +1,7 @@
 * {
-  transition: background-color 1s, color 0.1s; }
+  transition: color .1s, background .2s, border .2s, padding .2s, margin .2s, left .2s, white-space .2s; }
+  *:after, *:before {
+    transition: color .1s, background .2s, border .2s; }
 
 body {
   padding: 0;
@@ -15,8 +17,11 @@ body {
     flex-direction: column; }
     body #app > .common-header {
       text-align: center;
-      min-height: 50px;
-      line-height: 50px; }
+      justify-content: center;
+      flex-direction: row;
+      min-height: 30px;
+      padding: 10px;
+      line-height: 30px; }
     body #app > .common-body {
       flex-grow: 1;
       overflow: hidden; }
@@ -28,7 +33,6 @@ body {
   body div, body section {
     display: flex; }
   body .column {
-    flex-grow: 1;
     flex-direction: column;
     padding: 5px;
     margin: 5px; }
